@@ -13,15 +13,33 @@
 //const int true = 1;
 
 enum TCharCode{
-    ccLetter, ccDigit, ccSpecial, ccQuote, ccWhiteSpace, ccEndOfFile, ccError,
+    ccLetter
+    ,ccDigit
+    ,ccSpecial
+    ,ccQuote
+    ,ccWhiteSpace
+    ,ccEndOfFile
+    ,ccError
+    ,
 };
 
 enum TTokenCodes{
-    tcDummy, tcWord, tcNumber, tcPeriod, tcEndOfFile, tcError,
+    tcDummy
+    ,tcWord
+    ,tcNumber
+    ,tcPeriod
+    ,tcEndOfFile
+    ,tcError
+    ,
 };
 
 enum TDataType{
-    tyDummy, tyInteger, tyReal, tyCharacter, tyString,
+    tyDummy
+    ,tyInteger
+    ,tyReal
+    ,tyCharacter
+    ,tyString
+    ,
 };
 
 union TDataValue{

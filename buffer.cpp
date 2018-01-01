@@ -116,9 +116,3 @@ void TListBuffer::PutLine(void){
     text[0] = '\0';
     ++lineCount;
 }
-
-
-
-
-
-
