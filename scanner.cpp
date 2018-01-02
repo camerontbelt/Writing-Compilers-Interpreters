@@ -43,7 +43,7 @@ void TTextScanner::SkipWhiteSpace(void){
     };
 }
 
-TToken *TtextScanner::Get(void){
+TToken *TTextScanner::Get(void){
     TToken *pToken;
     
     SkipWhiteSpace();
@@ -68,4 +68,6 @@ TToken *TtextScanner::Get(void){
             pToken = &errorToken;
             break;
     }
+    pToken->Get(*pTextInBuffer);
+    return pToken;
 }

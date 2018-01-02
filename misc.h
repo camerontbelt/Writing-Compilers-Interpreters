@@ -23,7 +23,7 @@ enum TCharCode{
     ,
 };
 
-enum TTokenCodes{
+enum TTokenCode{
     tcDummy
     ,tcWord
     ,tcNumber
