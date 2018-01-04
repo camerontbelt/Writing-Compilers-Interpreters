@@ -6,6 +6,7 @@
 //  Copyright © 2017 Cameron Belt. All rights reserved.
 //
 
+#include "stdafx.h"
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
@@ -99,10 +100,11 @@ void TListBuffer::Initialize(const char *pFileName){
     pageNumber = 0;
     
     pSourceFileName = new char[strlen(pFileName) + 1];
-    strcpy(pSourceFileName, pFileName);
+	strcpy(pSourceFileName, pFileName);
     
     time_t timer;
-    time(&timer);strcpy(date, asctime(localtime(&timer)));
+    time(&timer);
+	strcpy_s(date, asctime(localtime(&timer)));
     date[strlen(date) - 1] = '\0';
     PrintPageHeader();
 }

@@ -5,7 +5,7 @@
 //  Created by cameron belt on 8/9/17.
 //  Copyright © 2017 Cameron Belt. All rights reserved.
 //
-
+#include "stdafx.h"
 #include "common.h"
 
 int currentNestingLevel = 0;

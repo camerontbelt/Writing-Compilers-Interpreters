@@ -1,0 +1,10 @@
+﻿  stdafx.cpp
+  WCI.cpp
+  token.cpp
+  scanner.cpp
+  parser.cpp
+  error.cpp
+  common.cpp
+  buffer.cpp
+  Generating Code...
+  WCI.vcxproj -> C:\Users\cbelt\source\repos\WCI\x64\Debug\WCI.exe

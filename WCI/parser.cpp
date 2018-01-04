@@ -5,6 +5,7 @@
 //  Created by cameron belt on 1/4/18.
 //  Copyright © 2018 Cameron Belt. All rights reserved.
 //
+#include "stdafx.h"
 #include <stdio.h>
 #include "common.h"
 #include "buffer.h"
@@ -18,15 +19,15 @@ void TParser::Parse(void){
             pToken->Print();
         }
         else{
-            sprintf(list.text, "\t%-18s %-s",">> *** Error ***",pToken->String());
+            sprintf_s(list.text, "\t%-18s %-s",">> *** Error ***",pToken->String());
             list.PutLine();
             ++errorCount;
         }
     }while(token != tcEndOfFile);
     
     list.PutLine();
-    sprintf(list.text, "%20d source lines.", currentLineNumber);
+    sprintf_s(list.text, "%20d source lines.", currentLineNumber);
     list.PutLine();
-    sprintf(list.text, "%20d syntax errors.", errorCount);
+    sprintf_s(list.text, "%20d syntax errors.", errorCount);
     list.PutLine();
 }

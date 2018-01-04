@@ -6,6 +6,7 @@
 //  Copyright © 2017 Cameron Belt. All rights reserved.
 //
 
+#include "stdafx.h"
 #include <string.h>
 #include <stdio.h>
 #include "token.h"
@@ -19,12 +20,12 @@ void TWordToken::Get(TTextInBuffer &buffer){
         ch = buffer.GetChar();
     }while((charCodeMap[ch] == ccLetter) || (charCodeMap[ch] == ccDigit));
     *ps = '\0';
-    _strlwr(string);
+    _strlwr_s(string);
     code = tcWord;
 }
 
 void TWordToken::Print(void) const{
-    sprintf(list.text,"\t%-18s %-s",">> word:",string);
+    sprintf_s(list.text,"\t%-18s %-s",">> word:",string);
     list.PutLine();
 }
 
@@ -51,7 +52,7 @@ void TNumberToken::Get(TTextInBuffer &buffer){
 }
 
 void TNumberToken::Print(void) const{
-    sprintf(list.text, "\t%-18s =%d",">> number:",value.integer);
+    sprintf_s(list.text, "\t%-18s =%d",">> number:",value.integer);
     list.PutLine();
 }
 
@@ -67,7 +68,7 @@ void TSpecialToken::Get(TTextInBuffer &buffer){
 }
 
 void TSpecialToken::Print(void)const{
-    sprintf(list.text, "\t%-18s %-s",">> special:",string);
+    sprintf_s(list.text, "\t%-18s %-s",">> special:",string);
     list.PutLine();
 }
 

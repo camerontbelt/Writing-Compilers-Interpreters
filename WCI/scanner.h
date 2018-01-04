@@ -9,6 +9,7 @@
 #ifndef scanner_h
 #define scanner_h
 
+#include "stdafx.h"
 #include <stdio.h>
 #include "misc.h"
 #include "buffer.h"

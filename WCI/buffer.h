@@ -9,6 +9,7 @@
 #ifndef buffer_h
 #define buffer_h
 
+#include "stdafx.h"
 #include <fstream>
 #include <cstdio>
 #include <string>
@@ -61,7 +62,7 @@ public:
     char text[maxInputBufferSize + 16];
     virtual void PutLine(void) = 0;
     void PutLine(const char *pText){
-        strcpy(text, pText);
+        strcpy_s(text, pText);
         PutLine();
     }
 };
@@ -86,7 +87,7 @@ public:
     }
     
     void PutLine(const char *pText, int lineNumber, int nestingLevel){
-        sprintf(text, "%4d %d: %s",lineNumber, nestingLevel, pText);
+        sprintf_s(text, "%4d %d: %s",lineNumber, nestingLevel, pText);
         PutLine();
     }
 };

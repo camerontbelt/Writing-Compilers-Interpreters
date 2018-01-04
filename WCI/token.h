@@ -9,6 +9,7 @@
 #ifndef token_hpp
 #define token_hpp
 
+#include "stdafx.h"
 #include <stdio.h>
 
 #include "misc.h"
@@ -71,8 +72,8 @@ public:
 
 class TStringToken : public TToken{
 public:
-    virtual void Get(TTextInBuffer &buffer){}
-    virtual void Print(void){}
+	virtual void Get(TTextInBuffer &buffer) {}
+		virtual void Print(void) const {}
 };
 
 class TSpecialToken : public TToken{
