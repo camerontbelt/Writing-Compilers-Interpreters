@@ -48,6 +48,9 @@ public:
     char *String(){
         return string;
     }
+    
+    virtual void Get(TTextInBuffer &buffer) = 0;
+    virtual void Print(void) const = 0;
 };
 
 class TWordToken : public TToken{
@@ -68,10 +71,8 @@ public:
 
 class TStringToken : public TToken{
 public:
-    virtual void Get(TTextInBuffer &buffer){
-    }
-    virtual void Print(void){
-    }
+    virtual void Get(TTextInBuffer &buffer){}
+    virtual void Print(void){}
 };
 
 class TSpecialToken : public TToken{
@@ -85,10 +86,8 @@ public:
     TEOFToken(void){
         code = tcEndOfFile;
     }
-    virtual void Get(TTextInBuffer &buffer){
-    }
-    virtual void Print(void) const{
-    }
+    virtual void Get(TTextInBuffer &buffer){}
+    virtual void Print(void) const{}
 };
 
 class TErrorToken : public TToken{

@@ -1,13 +1,13 @@
 //
-//  scanner.hpp
+//  scanner.h
 //  WCI
 //
 //  Created by cameron belt on 8/19/17.
 //  Copyright © 2017 Cameron Belt. All rights reserved.
 //
 
-#ifndef scanner_hpp
-#define scanner_hpp
+#ifndef scanner_h
+#define scanner_h
 
 #include <stdio.h>
 #include "misc.h"
@@ -16,7 +16,6 @@
 
 class TScanner {
 protected:
-    
     TWordToken wordToken;
     TNumberToken numberToken;
     TStringToken stringToken;
