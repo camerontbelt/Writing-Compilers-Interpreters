@@ -9,21 +9,21 @@
 #include <iostream>
 #include "buffer.h"
 #include "error.h"
+#include "parser.h"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    char ch;
-    
+        
     if(argc != 2){
         cerr << "Usage: list <source file>" << endl;
         AbortTranslation(abortInvalidCommandLineArgs);
     }
+    TParser parser(new TSourceBuffer(argv[1]));
+    parser.Parse();
     
-    TSourceBuffer source(argv[1]);
-    
-    do{
-        ch = source.GetChar();
-    }while(ch != eofChar);
+//    do{
+//        ch = source.GetChar();
+//    }while(ch != eofChar);
     return 0;
 }
