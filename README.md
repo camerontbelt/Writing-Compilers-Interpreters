@@ -1,1 +1,3 @@
-WCI
+# Writing Compilers and Interpreters 
+
+This project is following along with the book [Writing Compilers and Interpreters](https://www.amazon.com/Writing-Compilers-Interpreters-Ronald-Mak/dp/0471113530/ref=sr_1_2?ie=UTF8&qid=1515033733&sr=8-2&keywords=writing+compilers+and+interpreters) I hope you find this as useful and as fun as I do! This project is written in C++ and some C, so far I have had no problems with legacy C++ as this book was written in the early 2000’s. I plan on porting this over to C# as soon as I am finished and have digested the big picture of creating a working compiler or interpreter. 
